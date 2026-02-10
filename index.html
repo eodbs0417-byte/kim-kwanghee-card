@@ -3,89 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>김광희 | 모바일 명함</title>
+  <title>김광희 명함</title>
 
   <style>
     body {
       margin: 0;
       padding: 0;
+      background: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
-      background: #f5f6f8;
-      color: #222;
     }
 
-    .container {
-      max-width: 480px;
+    .card-wrap {
+      max-width: 520px;
       margin: 0 auto;
-      padding: 20px;
     }
 
     .card-image {
       width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      display: block;
     }
 
     .actions {
-      margin-top: 24px;
+      padding: 20px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
+      background: #f5f6f8;
     }
 
-    .action-btn {
-      text-align: center;
-      padding: 14px 10px;
-      border-radius: 12px;
-      background: #ffffff;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: all 0.2s ease;
-    }
-
-    .action-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-
-    .full {
-      grid-column: span 2;
-      background: #2f3a8f;
-      color: #fff;
-    }
-
+.action-btn {
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 12px;
+  background: #2F3A8F; /* EX service 블루 */
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.call {
+  background: #E60012; /* EX service 레드 */
+}
+}
+   
     footer {
-      margin-top: 24px;
-      font-size: 12px;
       text-align: center;
+      font-size: 12px;
       color: #999;
+      padding: 12px 0 20px;
+      background: #f5f6f8;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <!-- 명함 이미지 -->
+  <!-- 명함 이미지 -->
+  <div class="card-wrap">
     <img
-      src="https://example.com/kim_kwanghee_card.png"
+      src="kim_kwanghee_card.png"
       alt="김광희 명함"
       class="card-image"
     />
-
-    <!-- 액션 버튼 -->
-    <div class="actions">
-      <a href="tel:01090544751" class="action-btn">📞 전화</a>
-      <a href="sms:01090544751" class="action-btn">💬 문자</a>
-      <a href="mailto:Kkhee6436@exservice.co.kr" class="action-btn">✉️ 이메일</a>
-      <a href="https://example.com/kim_kwanghee.vcf" class="action-btn">📇 연락처 저장</a>
-    </div>
-
-    <footer>
-      NFC Mobile Card · EX Service
-    </footer>
   </div>
+
+  <!-- 액션 버튼 -->
+  <div class="actions">
+    <a href="tel:01090544751" class="action-btn">📞 전화</a>
+    <a href="sms:01090544751" class="action-btn">💬 문자</a>
+    <a href="mailto:Kkhee6436@exservice.co.kr" class="action-btn">✉️ 이메일</a>
+    <a href="#" class="action-btn">📇 연락처 저장</a>
+  </div>
+
+  <footer>
+    NFC Mobile Card · EX Service
+  </footer>
 
 </body>
 </html>
